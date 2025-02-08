@@ -109,3 +109,12 @@ It uses a Map object to store previously computed results.
 When the returned function is called, it checks if the result is in the cache.
 If found, it returns the cached result, improving performance.
 Otherwise, it computes the result, stores it in the cache, and returns it.
+
+-------------------------------------
+📌 1. Understanding Memoization
+What is Memoization?
+Memoization is a technique to optimize recursive or expensive computations by storing previously computed results in a cache.
+If the same input appears again, the function fetches the result from the cache instead of recalculating it.
+Why Use Memoization?
+Performance improvement: Reduces redundant calculations.
+Saves computation time: Especially useful for recursive functions like factorial or Fibonacci.
