@@ -1,0 +1,96 @@
+Array vs Set vs Map in JavaScript
+In JavaScript, Arrays, Sets, and Maps are used to store collections of data, but each has different characteristics and use cases.
+
+📌 1. Key Differences Between Array, Set, and Map
+Feature	Array 📜	Set 🔥	Map 🗺️
+Structure	Ordered list of elements	Collection of unique values	Collection of key-value pairs
+Duplicates	✅ Allows duplicates	❌ No duplicates allowed	❌ No duplicate keys allowed
+Indexing	✅ Access via index (arr[0])	❌ No direct access via index	✅ Access via .get(key)
+Order	✅ Maintains insertion order	✅ Maintains insertion order	✅ Maintains insertion order
+Performance	❌ Slower for searching (O(n))	✅ Fast lookup (O(1))	✅ Fast lookup (O(1))
+Common Use	Lists, arrays of elements	Unique values (tags, filters)	Key-value pairs (user data, configurations)
+
+
+📌 2. Properties & Methods of Array, Set, and Map
+Feature	Array 📜	Set 🔥	Map 🗺️
+Size	arr.length	set.size	map.size
+Add Item	arr.push(value)	set.add(value)	map.set(key, value)
+Remove Item	arr.splice(index, 1)	set.delete(value)	map.delete(key)
+Check Existence	arr.includes(value)	set.has(value)	map.has(key)
+Retrieve Item	arr[index]	❌ Not possible	map.get(key)
+Loop Through	forEach, map, for	forEach, for of	forEach, for of
+Clear All	arr = [] or arr.length = 0	set.clear()	map.clear()
+
+
+📌 3. Examples of Array, Set, and Map
+✅ Example 1: Working with an Array
+js
+Copy
+Edit
+const fruits = ["apple", "banana", "orange", "banana"]; // Allows duplicates
+
+console.log(fruits.length); // 4
+console.log(fruits[1]); // "banana"
+
+fruits.push("grape"); // Add item
+console.log(fruits); // ["apple", "banana", "orange", "banana", "grape"]
+
+console.log(fruits.includes("banana")); // true
+
+fruits.splice(1, 1); // Remove "banana"
+console.log(fruits); // ["apple", "orange", "banana", "grape"]
+
+
+✅ Example 2: Working with a Set
+
+const fruitSet = new Set(["apple", "banana", "orange", "banana"]); // Duplicates removed
+
+console.log(fruitSet.size); // 3
+console.log(fruitSet.has("banana")); // true
+
+fruitSet.add("grape"); // Add item
+console.log(fruitSet); // Set(4) { 'apple', 'banana', 'orange', 'grape' }
+
+fruitSet.delete("banana"); // Remove item
+console.log(fruitSet); // Set(3) { 'apple', 'orange', 'grape' }
+
+fruitSet.clear(); // Clear all items
+console.log(fruitSet.size); // 0
+
+✅ Example 3: Working with a Map
+
+const fruitMap = new Map([
+  ["apple", 100],
+  ["banana", 50],
+  ["orange", 70]
+]);
+
+console.log(fruitMap.size); // 3
+console.log(fruitMap.get("apple")); // 100
+
+fruitMap.set("grape", 90); // Add item
+console.log(fruitMap); // Map(4) { 'apple' => 100, 'banana' => 50, 'orange' => 70, 'grape' => 90 }
+
+console.log(fruitMap.has("banana")); // true
+
+fruitMap.delete("banana"); // Remove item
+console.log(fruitMap); // Map(3) { 'apple' => 100, 'orange' => 70, 'grape' => 90 }
+
+fruitMap.clear(); // Clear all items
+console.log(fruitMap.size); // 0
+
+📌 4. Performance Comparison (When to Use What?)
+Use Case	Best Choice	Reason
+Need an ordered list of items	✅ Array	Allows indexing & iteration
+Need to store unique values	✅ Set	Ensures uniqueness, fast lookups
+Need key-value storage	✅ Map	Efficient lookups, better than object
+Need fast lookups (O(1))	✅ Set or Map	Better than Array (O(n))
+Need frequent insertions/removals	✅ Set or Map	More efficient than Array
+
+🎯 Final Summary
+Feature	Array 📜	Set 🔥	Map 🗺️
+Structure	Indexed collection	Unique collection	Key-value collection
+Duplicates?	✅ Yes	❌ No	❌ No (keys only)
+Access Type	By index (arr[i])	.has(value)	.get(key)
+Performance	❌ Slow search (O(n))	✅ Fast lookup (O(1))	✅ Fast lookup (O(1))
+Common Use	Lists, arrays of elements	Unique values (tags, visited pages)	Key-value storage
