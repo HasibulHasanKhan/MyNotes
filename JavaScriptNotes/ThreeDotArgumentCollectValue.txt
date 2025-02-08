@@ -1,0 +1,3 @@
+Note : (...args) 
+  Collect the argument as an array. 
+  print this argument we find an array of output.
