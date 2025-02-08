@@ -1,0 +1,67 @@
+* Higher Order Functions Problem :
+
+Problem : Function Caching:- Create a function that caches results of another function to improve performance.
+------------------------------------
+🔹 Implementing Function Caching (Memoization) in JavaScript
+Caching (or memoization) is a technique that stores the results of expensive function calls and returns the stored result when the same inputs occur again :
+
+🔹 Custom Memoization Function :
+
+function memoize(fn) {
+    const cache = new Map();
+    
+    return function(...args) {
+        const key = JSON.stringify(args); // Convert arguments into a string key
+        if (cache.has(key)) {
+            console.log("Fetching from cache:", key);
+            return cache.get(key);
+        }
+        
+        console.log("Calculating result:", key);
+        const result = fn(...args);
+        cache.set(key, result);
+        return result;
+    };
+}
+🔹 Example Usage: Caching Factorial Calculation :
+
+function factorial(n) {
+    if (n === 0 || n === 1) return 1;
+    return n * factorial(n - 1);
+}
+
+// Create a cached version of factorial
+const cachedFactorial = memoize(factorial);
+
+console.log(cachedFactorial(5)); // Calculates and stores result
+console.log(cachedFactorial(5)); // Fetches from cache (improved performance)
+console.log(cachedFactorial(6)); // Calculates new value
+
+🔹 Example Usage: Caching API Calls :
+
+
+async function fetchData(url) {
+    const response = await fetch(url);
+    return response.json();
+}
+
+// Create a cached version of fetchData
+const cachedFetch = memoize(fetchData);
+
+cachedFetch("https://jsonplaceholder.typicode.com/todos/1")
+    .then(data => console.log(data));
+
+cachedFetch("https://jsonplaceholder.typicode.com/todos/1") // From cache
+    .then(data => console.log(data));
+
+
+🔹 Explanation
+Stores results in a Map using function arguments as a key.
+Returns cached results if the function is called with the same arguments.
+Recalculates only if new arguments are passed.
+
+
+🔹 Benefits
+✅ Reduces duplicate calculations
+✅ Speeds up function calls
+✅ Ideal for expensive computations (e.g., Fibonacci, API calls, etc.)
