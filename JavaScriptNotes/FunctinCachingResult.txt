@@ -65,3 +65,47 @@ Recalculates only if new arguments are passed.
 ✅ Reduces duplicate calculations
 ✅ Speeds up function calls
 ✅ Ideal for expensive computations (e.g., Fibonacci, API calls, etc.)
+
+
+--------------------------
+function memoize(fn) {
+    const cache = new Map();
+
+    return function (...args) {
+        const key = JSON.stringify(args);
+        if (cache.has(key)) {
+            console.log("Fetching from cache:", key);
+            return cache.get(key);
+        }
+
+        console.log("Computing result for:", key);
+        const result = fn(...args);
+        cache.set(key, result);
+        return result;
+    };
+}
+
+// Example usage
+function slowFunction(num) {
+    // Simulating an expensive computation
+    for (let i = 0; i < 1e6; i++) {}
+    return num * num;
+}
+
+const memoizedFunction = memoize(slowFunction);
+
+console.log(memoizedFunction(5)); // Computation happens
+console.log(memoizedFunction(5)); // Retrieved from cache
+console.log(memoizedFunction(10)); // Computation happens
+console.log(memoizedFunction(10)); // Retrieved from cache
+
+
+
+
+Explanation:
+
+The memoize function takes another function (fn) as an argument.
+It uses a Map object to store previously computed results.
+When the returned function is called, it checks if the result is in the cache.
+If found, it returns the cached result, improving performance.
+Otherwise, it computes the result, stores it in the cache, and returns it.
