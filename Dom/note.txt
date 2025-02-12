@@ -1,0 +1,503 @@
+list js dom all this things .
+ChatGPT said:
+Here’s a comprehensive list of JavaScript DOM (Document Object Model) methods and properties, grouped by their functionality:
+
+1. Selecting DOM Elements
+document.getElementById(): Selects an element by its ID.
+document.getElementsByClassName(): Selects elements by their class name.
+document.getElementsByTagName(): Selects elements by their tag name.
+document.querySelector(): Selects the first element matching a CSS selector.
+document.querySelectorAll(): Selects all elements matching a CSS selector.
+document.querySelector(): Selects the first matching element for a given CSS selector.
+document.forms[]: Selects a form element by its index or name.
+2. Manipulating HTML Content
+element.innerHTML: Gets or sets the HTML content of an element.
+element.innerText: Gets or sets the visible text content of an element.
+element.textContent: Gets or sets the text content of an element.
+element.insertAdjacentHTML(): Inserts HTML content relative to the element.
+element.setAttribute(): Sets an attribute value for an element.
+element.getAttribute(): Gets the value of an element's attribute.
+element.removeAttribute(): Removes an attribute from an element.
+3. Manipulating Element Styles
+element.style: Allows direct manipulation of an element's inline styles.
+element.classList: Provides methods to add, remove, or toggle classes.
+element.classList.add(): Adds a class to the element.
+element.classList.remove(): Removes a class from the element.
+element.classList.toggle(): Toggles a class.
+element.classList.contains(): Checks if a class exists.
+4. Handling Events
+element.addEventListener(): Adds an event listener to an element.
+element.removeEventListener(): Removes an event listener from an element.
+element.dispatchEvent(): Dispatches an event to an element.
+element.onclick, element.onmouseover, element.onkeyup, etc.: Inline event handler attributes.
+5. Creating and Removing Elements
+document.createElement(): Creates a new HTML element.
+element.appendChild(): Adds a child element to an element.
+element.insertBefore(): Inserts a new element before an existing child.
+element.removeChild(): Removes a child element from an element.
+element.replaceChild(): Replaces a child element with another.
+6. Navigating the DOM Tree
+element.parentNode: Gets the parent node of an element.
+element.childNodes: Gets all child nodes of an element.
+element.firstChild: Gets the first child node.
+element.lastChild: Gets the last child node.
+element.nextSibling: Gets the next sibling node.
+element.previousSibling: Gets the previous sibling node.
+7. Form Handling
+element.value: Gets or sets the value of a form element (input, select, textarea).
+element.submit(): Submits a form.
+element.reset(): Resets a form to its default values.
+document.forms: Selects all forms in the document.
+8. Browser & Window Interaction
+window.alert(): Displays an alert dialog box.
+window.confirm(): Displays a dialog box with OK and Cancel buttons.
+window.prompt(): Displays a dialog box that prompts the user for input.
+window.open(): Opens a new browser window.
+window.close(): Closes the current window.
+document.title: Gets or sets the title of the document.
+document.location: Gets or sets the URL of the document.
+9. CSS and Style Manipulation
+element.style.propertyName: Directly manipulates the element's CSS style properties.
+window.getComputedStyle(): Retrieves computed styles for an element.
+10. Manipulating the DOM with jQuery (if used)
+$(selector).css(): Manipulates CSS properties.
+$(selector).show(): Shows an element.
+$(selector).hide(): Hides an element.
+$(selector).toggle(): Toggles an element's visibility.
+$(selector).fadeIn(): Fades an element in.
+$(selector).fadeOut(): Fades an element out.
+These are the basic DOM methods and properties. As you work more with JavaScript, you’ll find additional methods to handle specific tasks more efficiently.
+
+
+
+
+
+
+
+You said:
+more
+ChatGPT said:
+Here’s an expanded list of additional JavaScript DOM methods and properties that can help you manipulate and interact with the document more effectively:
+
+11. Element Traversing
+element.closest(): Finds the closest ancestor (or the element itself) matching a selector.
+element.contains(): Checks if the specified element is a descendant of the given element.
+element.children: Gets all the child elements (excluding text and comment nodes).
+element.firstElementChild: Gets the first child element.
+element.lastElementChild: Gets the last child element.
+element.nextElementSibling: Gets the next sibling element.
+element.previousElementSibling: Gets the previous sibling element.
+element.parentElement: Gets the parent element (ignores text nodes).
+element.offsetTop, element.offsetLeft, element.offsetHeight, element.offsetWidth: Gets the position and size of an element relative to its offset parent.
+12. Event Handling (continued)
+event.preventDefault(): Prevents the default action associated with an event.
+event.stopPropagation(): Stops the event from propagating up or down the DOM.
+event.target: Returns the element that triggered the event.
+event.currentTarget: Returns the element that is currently handling the event.
+element.onmouseenter, element.onmouseleave: Handles mouse enter and leave events.
+element.onfocus, element.onblur: Handles focus and blur events for form elements.
+element.oninput, element.onchange: Handles input and change events for form elements.
+13. Cloning and Copying Nodes
+element.cloneNode(): Creates a copy of the element (can optionally include child nodes).
+element.cloneNode(true): Deep copy (includes child nodes).
+element.cloneNode(false): Shallow copy (does not include child nodes).
+14. Modifying the DOM Structure
+document.createTextNode(): Creates a text node.
+element.replaceWith(): Replaces the current element with another element.
+element.before(), element.after(): Insert content before or after an element.
+element.append(), element.prepend(): Inserts content at the end or beginning of an element.
+element.remove(): Removes an element from the DOM.
+element.replaceChild(): Replaces an existing child node with a new one.
+15. Handling Classes and Styles
+element.className: Gets or sets the class name of an element (as a string).
+element.classList.add(): Adds one or more class names to the element.
+element.classList.remove(): Removes one or more class names from the element.
+element.classList.toggle(): Toggles the presence of a class name.
+element.classList.contains(): Checks if an element has a particular class name.
+element.classList.replace(): Replaces one class name with another.
+16. Working with HTML Forms
+document.getElementById('form_id').elements[]: Retrieves form elements by name or index.
+element.select(): Selects an input element (usually for text selection).
+element.focus(): Sets focus on an element (e.g., input field).
+element.blur(): Removes focus from an element.
+form.submit(): Submits the form programmatically.
+17. Scrolling and Animation
+element.scrollTop, element.scrollLeft: Gets or sets the scroll position (vertical or horizontal).
+element.scrollIntoView(): Scrolls an element into view within its container.
+element.scrollTo(): Scrolls to a specific position within an element.
+window.scrollTo(): Scrolls to a specific position in the window.
+element.animate(): Starts a CSS animation on an element.
+window.requestAnimationFrame(): Used to optimize animations by syncing them with the browser's repaint cycle.
+18. Working with Time and Timers
+setTimeout(): Executes a function after a specified delay (in milliseconds).
+setInterval(): Repeatedly executes a function at specified intervals (in milliseconds).
+clearTimeout(): Cancels a timeout set with setTimeout().
+clearInterval(): Cancels an interval set with setInterval().
+19. Handling Cookies
+document.cookie: Gets or sets cookies for the document.
+document.cookie.split(): Can be used to parse and handle multiple cookies.
+20. Getting and Setting Values (JSON & Local Storage)
+localStorage.setItem(): Saves data to local storage.
+localStorage.getItem(): Retrieves data from local storage.
+localStorage.removeItem(): Removes data from local storage.
+localStorage.clear(): Clears all data from local storage.
+sessionStorage.setItem(): Saves data to session storage.
+sessionStorage.getItem(): Retrieves data from session storage.
+sessionStorage.removeItem(): Removes data from session storage.
+sessionStorage.clear(): Clears all data from session storage.
+JSON.parse(): Parses a JSON string and converts it to a JavaScript object.
+JSON.stringify(): Converts a JavaScript object to a JSON string.
+21. Error Handling
+try...catch: Handles errors during runtime.
+throw: Throws a custom error in the program.
+22. Working with Fetch API
+fetch(): Used to make HTTP requests.
+Response.json(): Parses a response body to JSON.
+Response.text(): Parses a response body to text.
+Response.ok: Checks if the HTTP response is successful.
+Response.status: Retrieves the HTTP response status code.
+These are some of the more advanced DOM manipulation and interaction methods that can make your JavaScript work even more powerful and efficient.
+
+
+
+
+
+
+
+You said:
+more
+ChatGPT said:
+Here are even more advanced JavaScript DOM methods and properties, diving deeper into specific areas of functionality:
+
+23. Working with Media Elements
+audio.play(), audio.pause(): Starts or pauses audio playback.
+audio.volume: Sets or retrieves the volume of an audio element.
+audio.currentTime: Gets or sets the current playback position (in seconds) of an audio element.
+video.play(), video.pause(): Starts or pauses video playback.
+video.currentTime: Gets or sets the current playback position of the video.
+video.duration: Gets the total length of the video.
+video.muted: Mutes or unmutes the video.
+audio.loop: Determines if the audio will loop after it ends.
+24. Drag and Drop API
+element.setAttribute('draggable', true): Marks an element as draggable.
+dragstart: Fired when the drag operation starts.
+drag: Fired when the element is being dragged.
+dragend: Fired when the drag operation ends.
+dragenter: Fired when a dragged element enters a valid drop target.
+dragover: Fired when an element is being dragged over a drop target.
+dragleave: Fired when a dragged element leaves a drop target.
+drop: Fired when an element is dropped on a drop target.
+event.dataTransfer: Provides access to the data being transferred during a drag-and-drop operation.
+event.dataTransfer.setData(): Sets the data to be transferred during a drag operation.
+event.dataTransfer.getData(): Retrieves the data being transferred.
+25. Mutation Observer API
+MutationObserver: Allows you to watch changes to the DOM tree.
+new MutationObserver(callback): Creates a new observer to watch for DOM mutations.
+observer.observe(): Starts observing the specified target element for changes.
+observer.disconnect(): Stops observing the target element.
+Mutation types:
+attributes: Watches changes to the element's attributes.
+childList: Watches changes to the child nodes of an element.
+subtree: Watches for changes in all descendant nodes.
+26. Intersection Observer API
+IntersectionObserver: Used to observe the intersection of an element with a parent element or the viewport.
+new IntersectionObserver(callback, options): Creates a new intersection observer.
+observer.observe(): Starts observing a target element.
+observer.unobserve(): Stops observing a target element.
+options: Options can include root, rootMargin, and threshold.
+callback: The function called when the target element enters or exits the defined area.
+27. Clipboard API
+navigator.clipboard.writeText(): Writes text to the clipboard.
+navigator.clipboard.readText(): Reads text from the clipboard.
+28. Geolocation API
+navigator.geolocation.getCurrentPosition(): Gets the device’s current position (latitude, longitude).
+navigator.geolocation.watchPosition(): Watches the device’s position and calls a callback when the position changes.
+navigator.geolocation.clearWatch(): Clears the position watch.
+29. Custom Events
+new CustomEvent(): Creates a custom event with specific properties.
+event.detail: Provides extra data passed with a custom event.
+element.dispatchEvent(): Dispatches a custom event to an element.
+element.addEventListener('event_name', callback): Listens for a custom event.
+30. History API
+window.history.pushState(): Adds a new entry to the browser history.
+window.history.replaceState(): Replaces the current history entry with a new one.
+window.history.back(): Goes to the previous page in the history.
+window.history.forward(): Goes to the next page in the history.
+window.history.go(): Moves forward or backward in the history by a specified number of steps.
+window.onpopstate: Triggered when the active history entry changes.
+31. Web Storage API (Continued)
+localStorage: Stores data with no expiration time (persistent across sessions).
+sessionStorage: Stores data that is only available during the page session.
+window.localStorage.length: Returns the number of items stored in local storage.
+window.sessionStorage.length: Returns the number of items stored in session storage.
+localStorage.key(): Gets the name of a key at a specific index in local storage.
+sessionStorage.key(): Gets the name of a key at a specific index in session storage.
+localStorage.clear(): Clears all data stored in local storage.
+sessionStorage.clear(): Clears all data stored in session storage.
+32. Canvas API
+document.createElement('canvas'): Creates a new canvas element.
+canvas.getContext('2d'): Gets the 2D drawing context for the canvas.
+canvas.width: Sets or retrieves the width of the canvas.
+canvas.height: Sets or retrieves the height of the canvas.
+context.beginPath(): Starts a new path for drawing.
+context.moveTo(x, y): Moves the drawing cursor to a specific point.
+context.lineTo(x, y): Draws a line from the current position to the specified coordinates.
+context.arc(x, y, radius, startAngle, endAngle): Draws an arc (circle or sector).
+context.fill(): Fills the current path with the current fill style.
+context.stroke(): Strokes the current path with the current stroke style.
+context.fillRect(x, y, width, height): Draws a filled rectangle.
+context.clearRect(x, y, width, height): Clears a rectangular area on the canvas.
+33. Web Workers API
+new Worker(): Creates a new web worker to run JavaScript code in the background.
+worker.postMessage(): Sends data to the worker.
+worker.onmessage: Event listener for messages from the worker.
+worker.terminate(): Terminates the worker immediately.
+self.onmessage: Event listener for messages in the worker.
+34. Service Workers API
+navigator.serviceWorker.register(): Registers a service worker.
+navigator.serviceWorker.ready: Returns a promise that resolves when the service worker is ready.
+serviceWorker.addEventListener('fetch', event): Intercepts and handles network requests.
+serviceWorker.cache(): Caches resources for offline use.
+35. WebSockets API
+new WebSocket(): Creates a new WebSocket connection.
+webSocket.send(): Sends a message through the WebSocket connection.
+webSocket.onopen: Event handler for when the WebSocket connection opens.
+webSocket.onmessage: Event handler for when a message is received.
+webSocket.onclose: Event handler for when the WebSocket connection is closed.
+36. Pointer Events API
+pointerdown, pointerup, pointermove: Handle pointer events such as touch or mouse events.
+pointerenter, pointerleave: Handle when a pointer enters or leaves an element.
+pointercancel: Fired when a pointer event is canceled.
+pointerId: Identifies the pointer being used (e.g., touch, mouse).
+pointerType: Identifies the type of pointer (e.g., mouse, touch).
+These are some of the more advanced and specialized JavaScript DOM APIs and methods that allow you to manipulate, monitor, and interact with the document, as well as integrate with modern web technologies. They can be essential when building dynamic, interactive, and feature-rich web applications.
+
+
+
+
+
+
+
+You said:
+more
+ChatGPT said:
+Here are even more advanced JavaScript DOM features and APIs, diving further into specialized areas for working with the browser, user interfaces, and modern web standards:
+
+37. Page Visibility API
+document.hidden: Returns true if the page is not visible (i.e., it is in the background).
+document.visibilityState: Returns the visibility state of the document (e.g., "visible", "hidden").
+document.addEventListener('visibilitychange', callback): Listens for visibility changes, allowing you to handle events when the page is hidden or shown.
+38. Fullscreen API
+element.requestFullscreen(): Requests to display an element in fullscreen mode.
+document.exitFullscreen(): Exits fullscreen mode.
+document.fullscreenElement: Returns the element that is currently being displayed in fullscreen mode.
+document.onfullscreenchange: Event listener for when the fullscreen mode changes.
+39. Notification API
+Notification.requestPermission(): Requests the user's permission to show notifications.
+new Notification(): Creates and displays a notification to the user.
+notification.close(): Closes an open notification.
+notification.onclick: Event handler for when the user clicks on the notification.
+notification.onclose: Event handler for when the notification is closed.
+40. Web Audio API
+new AudioContext(): Creates a new audio context for managing audio processing.
+audioContext.createOscillator(): Creates an oscillator node for generating sound waves.
+audioContext.createGain(): Creates a gain node to control volume.
+audioContext.createBufferSource(): Creates an audio source node to play sound from a buffer.
+audioContext.decodeAudioData(): Decodes audio data to play it in a format that the AudioContext can handle.
+audioContext.destination: The audio output (e.g., speakers).
+41. Screen Orientation API
+screen.orientation: Returns the current screen orientation (e.g., "portrait", "landscape").
+screen.orientation.lock(): Locks the screen to a specific orientation.
+screen.orientation.unlock(): Unlocks the screen orientation.
+screen.orientation.onchange: Event handler for when the screen orientation changes.
+42. Performance API
+performance.now(): Returns a high-resolution time stamp (in milliseconds) for the current time.
+performance.memory: Provides memory usage information in browsers that support it.
+performance.mark(): Creates a timestamp (mark) that can be used for performance measurements.
+performance.measure(): Measures the time between two marks.
+performance.getEntries(): Returns a list of performance entries, such as navigation or resource timing.
+43. Push Notifications API
+PushManager.subscribe(): Subscribes the user to push notifications.
+PushManager.getSubscription(): Returns the current push subscription.
+PushSubscription.unsubscribe(): Unsubscribes the user from push notifications.
+44. Payment Request API
+new PaymentRequest(): Creates a new payment request with necessary details (e.g., supported payment methods).
+paymentRequest.show(): Displays a payment interface to the user.
+paymentRequest.canMakePayment(): Checks whether the user is able to make a payment using the specified methods.
+45. Battery Status API
+navigator.getBattery(): Returns a promise with a battery status object.
+Battery status object properties:
+battery.level: The battery level (0 to 1).
+battery.charging: true if the device is charging.
+battery.chargingTime: Time (in seconds) until the battery is fully charged.
+battery.dischargingTime: Time (in seconds) until the battery is depleted.
+battery.onchargingchange: Event triggered when the charging status changes.
+battery.onlevelchange: Event triggered when the battery level changes.
+46. Pointer Lock API
+element.requestPointerLock(): Requests that the pointer (mouse) be locked to an element (usually for games or immersive experiences).
+document.exitPointerLock(): Exits the pointer lock mode.
+document.pointerLockElement: Returns the element that is currently locking the pointer.
+47. Web Speech API (Speech Recognition and Synthesis)
+Speech Recognition:
+new SpeechRecognition(): Creates a new speech recognition object.
+speechRecognition.start(): Starts listening for voice input.
+speechRecognition.stop(): Stops listening for voice input.
+speechRecognition.onresult: Event triggered when speech recognition results are available.
+Speech Synthesis:
+speechSynthesis.speak(): Speaks the given text aloud using the system's speech synthesis.
+speechSynthesis.cancel(): Cancels any ongoing speech synthesis.
+speechSynthesis.onvoiceschanged: Event triggered when the available voices change.
+48. Responsive Design: Media Queries (JavaScript)
+window.matchMedia(): Checks if a specific media query matches the current environment.
+Example: window.matchMedia("(max-width: 600px)") returns a MediaQueryList object.
+mediaQueryList.addListener(): Adds a listener that triggers when the media query state changes.
+mediaQueryList.removeListener(): Removes a listener from the media query.
+49. CSS Variables (Custom Properties)
+document.documentElement.style.setProperty(): Sets a CSS custom property (CSS variable).
+Example: document.documentElement.style.setProperty('--main-color', '#ff5733').
+getComputedStyle(element).getPropertyValue(): Retrieves the value of a CSS variable from the computed styles.
+Example: getComputedStyle(element).getPropertyValue('--main-color').
+50. Fetch API (Advanced)
+Request Object:
+new Request(url, options): Creates a new request object for custom fetch calls.
+request.method: Sets the HTTP method (GET, POST, etc.).
+request.headers: Sets custom headers for the request.
+request.body: Provides a body for the request, useful for POST or PUT requests.
+fetch() with advanced options:
+fetch(url, { method: 'POST', body: JSON.stringify(data), headers: { 'Content-Type': 'application/json' } }): Customizes requests with headers, body, and method.
+51. WebRTC (Real-Time Communication)
+navigator.mediaDevices.getUserMedia(): Requests access to media devices (camera, microphone).
+new RTCPeerConnection(): Creates a new peer connection for real-time communication.
+peerConnection.addTrack(): Adds a media track (audio or video) to the peer connection.
+peerConnection.createOffer(), peerConnection.createAnswer(): Creates offer and answer for establishing connections.
+peerConnection.setLocalDescription(), peerConnection.setRemoteDescription(): Sets local and remote descriptions for WebRTC sessions.
+peerConnection.onicecandidate: Event triggered when a new ICE candidate is found for the connection.
+52. Clipboard Events API
+document.addEventListener('copy', callback): Listens for copy events.
+document.addEventListener('cut', callback): Listens for cut events.
+document.addEventListener('paste', callback): Listens for paste events.
+event.clipboardData.getData(): Retrieves data from the clipboard during a paste event.
+53. Server-Sent Events (SSE)
+new EventSource(): Creates a connection to a server that pushes events to the client.
+eventSource.onmessage: Event handler for receiving messages from the server.
+eventSource.onerror: Event handler for handling errors during the event source connection.
+These are even more advanced JavaScript DOM features and modern web APIs, enhancing the capabilities for user interaction, media processing, background tasks, and real-time communication. They can be useful for building complex, feature-rich web applications that provide immersive, real-time, and highly interactive experiences.
+
+
+
+
+
+
+
+You said:
+more
+ChatGPT said:
+Here are even more advanced JavaScript DOM features and APIs to further enrich your web development toolkit:
+
+54. Custom Elements API
+Creating Custom Elements:
+class MyElement extends HTMLElement: Defines a custom element class that extends HTMLElement.
+customElements.define('my-element', MyElement): Registers a custom element with a tag name.
+Lifecycle Callbacks:
+connectedCallback(): Called when the element is inserted into the DOM.
+disconnectedCallback(): Called when the element is removed from the DOM.
+attributeChangedCallback(): Called when an observed attribute is changed.
+adoptedCallback(): Called when the element is moved to a new document.
+55. Web Bluetooth API
+navigator.bluetooth.requestDevice(): Prompts the user to select a Bluetooth device.
+device.gatt.connect(): Connects to the Bluetooth device via the GATT protocol.
+device.gatt.disconnect(): Disconnects from the Bluetooth device.
+device.gatt.getPrimaryService(): Retrieves the primary service from the connected device.
+service.getCharacteristic(): Retrieves a specific characteristic from a Bluetooth service.
+characteristic.readValue(): Reads the value of a Bluetooth characteristic.
+characteristic.writeValue(): Writes a value to a Bluetooth characteristic.
+56. WebUSB API
+navigator.usb.requestDevice(): Prompts the user to select a USB device.
+device.open(): Opens a connection to the selected USB device.
+device.close(): Closes the connection to the USB device.
+device.selectConfiguration(): Selects a configuration for the device.
+device.claimInterface(): Claims a particular interface on the device for communication.
+device.transferOut(), device.transferIn(): Sends and receives data between the USB device and the browser.
+57. WebRTC Data Channels
+peerConnection.createDataChannel(): Creates a new data channel for peer-to-peer communication.
+dataChannel.send(): Sends data over the data channel.
+dataChannel.onopen: Event handler for when the data channel opens.
+dataChannel.onmessage: Event handler for when data is received via the data channel.
+dataChannel.onerror: Event handler for when an error occurs in the data channel.
+58. WebShare API
+navigator.share(): Shares a file or data with other apps or websites, such as text, URLs, or files.
+navigator.canShare(): Checks if the current platform can share the given data.
+Example: navigator.share({ title: 'My Web Page', url: 'https://example.com' }).
+59. Resize Observer API
+new ResizeObserver(callback): Creates a new observer to watch for changes in the size of an element.
+resizeObserver.observe(): Starts observing the target element for resize changes.
+resizeObserver.disconnect(): Stops observing the target element.
+60. Web Components (Shadow DOM)
+Creating a Shadow Root:
+element.attachShadow({mode: 'open' | 'closed'}): Attaches a shadow DOM to an element.
+Shadow DOM:
+Allows for encapsulation, where styles and DOM are isolated from the main document.
+Using Shadow DOM:
+You can create an independent subtree of elements, styles, and behavior, preventing style leakage between the shadow DOM and the main document.
+61. Intl API (Internationalization)
+new Intl.NumberFormat(): Formats numbers according to locale-specific rules (e.g., currency, percentages).
+new Intl.DateTimeFormat(): Formats dates and times according to locale-specific rules.
+new Intl.Collator(): Compares strings based on locale-specific sorting rules.
+Intl.RelativeTimeFormat(): Formats relative time, such as "3 days ago."
+62. Web Crypto API
+Hashing:
+crypto.subtle.digest(): Creates a hash from data using algorithms like SHA-256.
+Encryption and Decryption:
+crypto.subtle.encrypt(), crypto.subtle.decrypt(): Performs encryption and decryption of data.
+Key Generation:
+crypto.subtle.generateKey(): Generates cryptographic keys for use in encryption/decryption.
+63. Broadcast Channel API
+new BroadcastChannel(): Creates a new broadcast channel for communication between different browser contexts (tabs, windows).
+channel.postMessage(): Sends a message to other contexts listening on the channel.
+channel.onmessage: Event handler for receiving messages from other contexts.
+channel.close(): Closes the broadcast channel.
+64. Fullscreen Navigation API
+document.exitFullscreen(): Exits fullscreen mode.
+document.requestFullscreen(): Requests fullscreen mode for the entire document.
+document.onfullscreenchange: Event handler for when the fullscreen mode changes.
+65. Geofencing API (in some browsers)
+navigator.geofencing: Provides geofencing capabilities for setting up virtual geographic boundaries.
+Used in conjunction with other geolocation services to trigger events when a device enters or exits a defined area.
+66. WebVR & WebXR API (Experimental)
+WebVR API: Allows you to create immersive virtual reality experiences.
+navigator.getVRDisplays(): Gets the available VR devices.
+VRDisplay.requestPresent(): Initiates VR display for immersive mode.
+WebXR API: Provides access to virtual and augmented reality experiences.
+navigator.xr.requestDevice(): Requests an XR device for immersive experiences.
+xrSession.requestReferenceSpace(): Requests a reference space for XR experiences.
+67. HTML5 Drag-and-Drop API
+dragstart: Triggered when the drag operation starts.
+dragover: Triggered when an element is being dragged over a valid drop target.
+dragenter: Triggered when a dragged element enters a drop target.
+dragleave: Triggered when a dragged element leaves a drop target.
+drop: Triggered when a dragged element is dropped on a target.
+68. Web Authentication API
+navigator.credentials.create(): Creates new credentials for the user (e.g., public key credentials).
+navigator.credentials.get(): Retrieves credentials for the user, allowing for authentication.
+Credential Management API: Manages credentials securely, including login, password storage, and verification.
+69. CSS Houdini (CSSOM)
+CSS.paintWorklet: Allows for custom paint on elements using JavaScript.
+CSS.layoutWorklet: Lets you define custom layouts using JavaScript.
+CSS.transitionWorklet: Lets you define custom transitions using JavaScript.
+CSS.registerProperty(): Registers a custom CSS property to be used within a stylesheet.
+70. Service Worker Background Sync
+navigator.serviceWorker.ready: Returns a promise when the service worker is ready to handle background sync.
+serviceWorkerRegistration.sync: Allows for syncing data in the background when connectivity is available.
+71. Image Capture API
+navigator.mediaDevices.getUserMedia(): Used for accessing camera and microphone.
+imageCapture.takePhoto(): Captures an image from a video stream.
+imageCapture.grabFrame(): Captures a frame from a video stream as a still image.
+72. Storage Access API
+navigator.storage.persist(): Allows a website to request persistent storage access even when the user clears cookies and site data.
+navigator.storage.persisted(): Returns a promise that resolves to whether the data has persisted.
+73. File System Access API
+window.showOpenFilePicker(): Opens a file picker to allow the user to select a file.
+window.showSaveFilePicker(): Opens a file picker to allow the user to select a location to save a file.
+fileHandle.getFile(): Retrieves the file from a file handle.
+fileHandle.createWritable(): Creates a writable stream to a file.
+These are even more advanced APIs and features in JavaScript that extend browser capabilities for specialized tasks, including interaction with hardware, immersive media, advanced security, and real-time data. With these tools, you can build sophisticated, cutting-edge web applications that provide users with powerful, seamless experiences.
